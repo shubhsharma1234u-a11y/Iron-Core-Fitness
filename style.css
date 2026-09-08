@@ -1,0 +1,1567 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+/* ========================================
+   BASIC SETUP
+======================================== */
+
+:root {
+    --bg-dark: #0b0d0f;
+    --bg-light: #121619;
+    --bg-card: #171c1f;
+
+    --red: #ef3e3e;
+    --red-hover: #d62f2f;
+
+    --white: #ffffff;
+    --muted: #a6abad;
+    --border: #2a3034;
+
+    --font: 'Montserrat', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--white);
+
+    font-family: var(--font);
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+header {
+    background-color: #080a0c;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+nav {
+    max-width: 1200px;
+    height: 70px;
+
+    margin: auto;
+
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+nav a:hover {
+    color: var(--red);
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+#home {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 7, 8, 0.96) 0%,
+            rgba(5, 7, 8, 0.78) 42%,
+            rgba(5, 7, 8, 0.20) 100%
+        ),
+        url("hero section.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 120px max(7%, 30px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+#home article {
+    max-width: 650px;
+}
+
+
+#home h3 {
+    color: var(--red);
+
+    font-size: 15px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+
+#home article > p {
+    max-width: 650px;
+
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    white-space: pre-line;
+
+    margin-bottom: 20px;
+}
+
+
+#home span {
+    display: block;
+
+    max-width: 520px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+#joinButton {
+    background-color: var(--red);
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 15px 30px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#joinButton:hover {
+    background-color: var(--red-hover);
+
+    transform: translateY(-2px);
+}
+
+
+#joinButton:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================
+   COMMON SECTION STYLING
+======================================== */
+
+main section {
+    padding: 90px max(7%, 30px);
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+#about {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 12, 14, 0.15) 0%,
+            rgba(10, 12, 14, 0.45) 40%,
+            rgba(10, 12, 14, 0.98) 65%
+        ),
+        url("about section.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-left: 50%;
+}
+
+
+#about > h3 {
+    color: var(--red);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+#about > h2 {
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+#about > p {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   ABOUT STATS
+======================================== */
+
+.cards {
+    display: flex;
+
+    gap: 60px;
+
+    margin-top: 45px;
+}
+
+
+.cards > div {
+    min-width: 120px;
+}
+
+
+.cards h2 {
+    font-size: 30px;
+
+    margin-bottom: 2px;
+}
+
+
+.cards p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   MEMBERSHIP PLANS
+======================================== */
+
+#plans {
+    background-color: #090c0e;
+}
+
+
+.top {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.top span {
+    color: var(--red);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.top h2 {
+    font-size: 36px;
+
+    margin-top: 8px;
+}
+
+
+.top p {
+    color: var(--muted);
+
+    margin-top: 5px;
+}
+
+
+.plans {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.plan1,
+.plan2,
+.plan3 {
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    padding: 35px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.plan1:hover,
+.plan2:hover,
+.plan3:hover {
+    border-color: var(--red);
+}
+
+
+.plan2 {
+    position: relative;
+
+    border-color: var(--red);
+}
+
+
+.prefer {
+    background-color: var(--red);
+
+    color: var(--white);
+
+    margin: -35px -28px 25px;
+
+    padding: 7px;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    border-radius: 6px 6px 0 0;
+}
+
+
+.plans h2 {
+    text-align: center;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.plans span {
+    display: block;
+
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.plans ul {
+    flex: 1;
+
+    margin-bottom: 30px;
+}
+
+
+.plans li {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    padding: 8px 0;
+}
+
+
+.plans li::before {
+    content: "✓";
+
+    color: var(--red);
+
+    font-weight: bold;
+
+    margin-right: 10px;
+}
+
+
+.plans button {
+    width: 100%;
+
+    padding: 13px;
+
+    background: transparent;
+
+    color: var(--white);
+
+    border: 1px solid #4a5155;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.plan2 button {
+    background-color: var(--red);
+
+    border-color: var(--red);
+}
+
+
+.plans button:hover {
+    background-color: var(--red);
+
+    border-color: var(--red);
+
+    transform: translateY(-2px);
+}
+
+
+.plans button:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================
+   WHY CHOOSE US
+======================================== */
+
+#why-us {
+    background-color: var(--bg-light);
+}
+
+
+#why-us > h2 {
+    color: var(--red);
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+#why-us > p {
+    max-width: 480px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 45px;
+}
+
+
+.points {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+.points > div {
+    border-top: 2px solid var(--red);
+
+    padding-top: 20px;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.points > div:hover {
+    border-color: var(--white);
+}
+
+
+.points h2 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+.points p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+#contact {
+    background-color: #0b0e10;
+}
+
+
+.Contact {
+    max-width: 800px;
+}
+
+
+.Contact > span {
+    color: var(--red);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.Contact > h2 {
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.15;
+
+    margin: 10px 0 20px;
+}
+
+
+.Contact > p {
+    max-width: 600px;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+
+.Contact li {
+    margin: 12px 0;
+
+    color: var(--muted);
+}
+
+
+.Contact a {
+    transition: color 0.2s ease;
+}
+
+
+.Contact a:hover {
+    color: var(--red);
+}
+
+
+#yourMessage {
+    margin-top: 30px;
+}
+
+
+#yourMessage > button {
+    background-color: var(--red);
+
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 14px 25px;
+
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#yourMessage > button:hover {
+    background-color: var(--red-hover);
+
+    transform: translateY(-2px);
+}
+
+
+#yourMessage > button:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+#contactForm {
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    opacity: 0;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        max-height 0.7s ease;
+}
+
+
+#contactForm.show-form {
+    opacity: 1;
+
+    max-height: 800px;
+
+    overflow: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background-color: #15191c;
+
+    color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+#contactForm textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+    border-color: var(--red);
+
+    background-color: #191e21;
+}
+
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #777;
+}
+
+
+#contactForm select {
+    cursor: pointer;
+}
+
+
+#contactForm select option {
+    background-color: #15191c;
+
+    color: var(--white);
+}
+
+
+#contactForm button {
+    width: fit-content;
+
+    background-color: var(--red);
+
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 14px 28px;
+
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+#contactForm button:hover {
+    background-color: var(--red-hover);
+
+    transform: translateY(-2px);
+}
+
+
+#contactForm button:active {
+    transform: scale(0.97);
+}
+
+
+#formMessage {
+    margin-top: 18px;
+
+    color: var(--red);
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #060809;
+
+    border-top: 1px solid var(--border);
+
+    padding: 35px max(7%, 30px);
+
+    color: var(--muted);
+}
+
+
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.footer > ul,
+.links ul {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer a {
+    font-size: 13px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer a:hover {
+    color: var(--red);
+}
+
+
+footer > span {
+    display: block;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #1c2124;
+}
+
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+======================================== */
+
+.reveal {
+    opacity: 0;
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+
+/* Left → Right */
+
+.reveal-left {
+    transform: translateX(-100px);
+}
+
+
+/* Right → Left */
+
+.reveal-right {
+    transform: translateX(100px);
+}
+
+
+/* Bottom → Top */
+
+.reveal-up {
+    transform: translateY(80px);
+}
+
+
+/* Scale */
+
+.reveal-scale {
+    transform: scale(0.85);
+}
+
+
+/* JS adds active */
+
+.reveal.active {
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        translateY(0)
+        scale(1);
+}
+
+
+/* ========================================
+   ANIMATION DELAYS
+======================================== */
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 0 25px;
+    }
+
+
+    nav ul {
+        gap: 25px;
+    }
+
+
+    #home {
+        min-height: 600px;
+
+        padding: 100px max(6%, 25px) 70px;
+    }
+
+
+    #home article {
+        max-width: 580px;
+    }
+
+
+    #home article > p {
+        font-size: clamp(40px, 7vw, 56px);
+    }
+
+
+    #about {
+        min-height: auto;
+
+        padding: 80px max(6%, 25px);
+
+        background:
+            linear-gradient(
+                rgba(7, 9, 10, 0.78),
+                rgba(7, 9, 10, 0.96)
+            ),
+            url("about section.png");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    #about > p {
+        max-width: 600px;
+    }
+
+
+    .cards {
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .plans {
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+
+        gap: 30px;
+    }
+
+
+    .plan1,
+    .plan2,
+    .plan3 {
+        width: 100%;
+    }
+
+
+    .points {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+
+    .Contact {
+        max-width: 650px;
+    }
+
+
+    .footer {
+        gap: 30px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    header {
+        position: sticky;
+
+        top: 0;
+    }
+
+
+    nav {
+        min-height: 65px;
+
+        height: auto;
+
+        padding: 15px 18px;
+
+        justify-content: center;
+    }
+
+
+    nav ul {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    nav a {
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+    /* HERO */
+
+    #home {
+        min-height: calc(100vh - 65px);
+
+        padding: 80px 20px 60px;
+
+        justify-content: center;
+
+        background:
+            linear-gradient(
+                rgba(5, 7, 8, 0.72),
+                rgba(5, 7, 8, 0.95)
+            ),
+            url("hero section.png");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    #home article {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    #home h3 {
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+
+    #home article > p {
+        width: 100%;
+
+        font-size: clamp(34px, 11vw, 46px);
+
+        line-height: 1.08;
+
+        letter-spacing: -1px;
+    }
+
+
+    #home span {
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    #joinButton {
+        width: 100%;
+
+        max-width: 220px;
+
+        padding: 14px 20px;
+    }
+
+
+    /* COMMON */
+
+    main section {
+        padding: 65px 20px;
+    }
+
+
+    /* ABOUT */
+
+    #about {
+        min-height: auto;
+
+        padding: 65px 20px;
+
+        background:
+            linear-gradient(
+                rgba(7, 9, 10, 0.80),
+                rgba(7, 9, 10, 0.97)
+            ),
+            url("about section.png");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    #about > h3 {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    #about > h2 {
+        font-size: 30px;
+    }
+
+
+    #about > p {
+        width: 100%;
+
+        font-size: 14px;
+    }
+
+
+    .cards {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 35px;
+    }
+
+
+    .cards > div {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 18px 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* PLANS */
+
+    .top {
+        margin-bottom: 35px;
+    }
+
+
+    .top span {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .top h2 {
+        font-size: 27px;
+    }
+
+
+    .top p {
+        font-size: 14px;
+    }
+
+
+    .plans {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .plan1,
+    .plan2,
+    .plan3 {
+        width: 100%;
+
+        padding: 30px 22px;
+    }
+
+
+    .prefer {
+        margin: -30px -22px 25px;
+    }
+
+
+    .plans span {
+        font-size: 21px;
+    }
+
+
+    .plans li {
+        font-size: 13px;
+    }
+
+
+    .plans button {
+        min-height: 46px;
+    }
+
+
+    /* WHY CHOOSE US */
+
+    #why-us > h2 {
+        font-size: 11px;
+    }
+
+
+    #why-us > p {
+        max-width: 100%;
+
+        font-size: 25px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .points {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .points > div {
+        width: 100%;
+    }
+
+
+    /* CONTACT */
+
+    .Contact {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .Contact > span {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .Contact > h2 {
+        font-size: 30px;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .Contact > p {
+        font-size: 14px;
+    }
+
+
+    .Contact li {
+        font-size: 13px;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    #yourMessage {
+        width: 100%;
+    }
+
+
+    #yourMessage > button {
+        width: 100%;
+    }
+
+
+    /* CONTACT FORM */
+
+    #contactForm {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    #contactForm input,
+    #contactForm select,
+    #contactForm textarea {
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+
+    #contactForm button {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 35px 20px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+
+    .footer > ul,
+    .links ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    footer > span {
+        line-height: 1.7;
+    }
+
+
+    /* MOBILE ANIMATION DISTANCE */
+
+    .reveal-left {
+        transform: translateX(-40px);
+    }
+
+
+    .reveal-right {
+        transform: translateX(40px);
+    }
+
+
+    .reveal-up {
+        transform: translateY(40px);
+    }
+
+
+    .reveal-scale {
+        transform: scale(0.93);
+    }
+
+
+    .reveal.active {
+        transform:
+            translateX(0)
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+    nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    nav ul {
+        gap: 9px;
+    }
+
+
+    nav a {
+        font-size: 10px;
+    }
+
+
+    #home {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    #home article > p {
+        font-size: 32px;
+    }
+
+
+    #home h3 {
+        letter-spacing: 3px;
+    }
+
+
+    main section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    #about {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    .top h2 {
+        font-size: 24px;
+    }
+
+
+    #about > h2,
+    .Contact > h2 {
+        font-size: 27px;
+    }
+
+
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}
